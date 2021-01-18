@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FlagsQuizApp">
         <activity
-            android:name=".MainActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize"
-        >
+            android:name=".QuizQuestionActivity"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
