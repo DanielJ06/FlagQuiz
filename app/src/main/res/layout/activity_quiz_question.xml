@@ -1,19 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
+    android:fillViewport="true"
     tools:context=".QuizQuestionActivity">
 
-    <TextView
-        android:id="@+id/textView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:text="New activity" />
-</LinearLayout>
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="15dp"
+    >
+        <TextView
+            android:id="@+id/questionLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="What country does this flag belong to?" />
+
+        <ImageView
+            android:id="@+id/flagImg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_flag_of_brazil"
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+        >
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="50dp"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:max="10"
+                android:indeterminate="false"
+            />
+
+            <TextView
+                android:id="@+id/textProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                android:textColorHint="#7A8089"
+                android:textSize="18sp"
+                android:text="1/10"
+            />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/optionOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:background="@drawable/default_option_border"
+            android:text="A"
+        />
+
+        <TextView
+            android:id="@+id/optionTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:background="@drawable/default_option_border"
+            android:text="B"
+            />
+
+        <TextView
+            android:id="@+id/optionThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:background="@drawable/default_option_border"
+            android:text="C"
+            />
+
+        <TextView
+            android:id="@+id/optionFour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:background="@drawable/default_option_border"
+            android:text="D"
+            />
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="15dp"
+            android:text="SUBMIT"
+            android:textSize="18sp"
+            android:textColor="#FFF"
+        />
+    </LinearLayout>
+</ScrollView>
